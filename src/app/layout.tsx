@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
+import favicon from "./favicon.png";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +19,11 @@ export const metadata: Metadata = {
   title: "Ajo Negro Austral — Patagonia Chilena",
   description:
     "Ajo negro cultivado en la Patagonia Chilena. Sabor único del sur. Bolsas de 60 g, 100 g y pedidos mayoristas.",
+  icons: {
+    icon: favicon.src,
+    shortcut: favicon.src,
+    apple: favicon.src,
+  },
 };
 
 export default function RootLayout({
