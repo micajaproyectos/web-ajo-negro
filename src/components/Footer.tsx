@@ -71,8 +71,38 @@ export default function Footer() {
           <p className="text-white/15 text-xs font-sans">
             &copy; 2026 Ajo Negro Austral. Todos los derechos reservados.
           </p>
-          <p className="text-white/15 text-xs font-sans">
-            Patagonia Chilena
+          <p className="text-white/30 text-xs font-sans flex items-center gap-2">
+            Creado por{" "}
+            <span
+              className="relative inline-flex items-center gap-[1px] font-bold tracking-tight"
+              style={{
+                fontFamily: "var(--font-geist-sans), system-ui, sans-serif",
+              }}
+            >
+              <span
+                style={{
+                  background: "linear-gradient(90deg, #7c3aed 0%, #06b6d4 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  filter: "drop-shadow(0 0 6px rgba(99,102,241,0.55)) drop-shadow(0 0 2px rgba(6,182,212,0.4))",
+                  fontSize: "0.75rem",
+                  letterSpacing: "-0.01em",
+                }}
+              >
+                AM
+              </span>
+              <span
+                style={{
+                  color: "rgba(255,255,255,0.45)",
+                  fontSize: "0.75rem",
+                  fontWeight: 400,
+                  letterSpacing: "0.04em",
+                }}
+              >
+                Tecnología
+              </span>
+            </span>
           </p>
         </div>
       </div>
