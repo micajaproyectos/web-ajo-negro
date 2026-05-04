@@ -1,6 +1,6 @@
 const WHATSAPP_MESSAGE =
   "Hola. Me gustaría cotizar sus productos de Ajo Negro Austral.";
-const WHATSAPP_LINK = `https://api.whatsapp.com/send/?phone=56985660954&text=${encodeURIComponent(
+const WHATSAPP_LINK = `https://api.whatsapp.com/send/?phone=56974348843&text=${encodeURIComponent(
   WHATSAPP_MESSAGE,
 )}&type=phone_number&app_absent=0`;
 

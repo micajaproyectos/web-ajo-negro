@@ -1,13 +1,13 @@
 const WHATSAPP_MESSAGE =
   "Hola. Me gustaría cotizar sus productos de Ajo Negro Austral al mayorista.";
-const WHATSAPP_LINK = `https://api.whatsapp.com/send/?phone=56985660954&text=${encodeURIComponent(
+const WHATSAPP_LINK = `https://api.whatsapp.com/send/?phone=56974348843&text=${encodeURIComponent(
   WHATSAPP_MESSAGE,
 )}&type=phone_number&app_absent=0`;
 
 const CONTACT_INFO = [
   {
     label: "WhatsApp",
-    value: "+56 9 8566 0954",
+    value: "+56 9 7434 8843",
     href: WHATSAPP_LINK,
     icon: "W",
   },

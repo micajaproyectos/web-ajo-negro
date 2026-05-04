@@ -52,10 +52,12 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-3 text-sm font-sans">
               <a
-                href="#"
+                href="https://api.whatsapp.com/send/?phone=56974348843&type=phone_number&app_absent=0"
                 className="text-white/40 hover:text-white/80 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                +56 9 8566 0954
+                +56 9 7434 8843
               </a>
               <a
                 href="mailto:contacto@amconsultora.cl"
