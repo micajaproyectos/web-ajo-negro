@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import ContactForm from "./ContactForm";
 import { trackEvent } from "@/lib/gtag";
 
@@ -28,14 +27,11 @@ const CONTACT_INFO = [
 
 export default function Contact() {
   return (
-    <section id="contacto" className="relative py-28 lg:py-36 overflow-hidden">
-      <Image
-        src="/contacto.webp"
-        alt=""
-        fill
-        className="object-cover"
-        aria-hidden="true"
-      />
+    <section
+      id="contacto"
+      className="relative py-28 lg:py-36 overflow-hidden"
+      style={{ backgroundImage: "url('/contacto.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
+    >
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -225,8 +224,10 @@ export default function ParaQueSirvePage() {
         </section>
 
         {/* Ajo negro para la cocina gourmet */}
-        <section className="relative py-28 lg:py-36 overflow-hidden">
-          <Image src="/cocina.webp" alt="" fill className="object-cover" aria-hidden="true" />
+        <section
+          className="relative py-28 lg:py-36 overflow-hidden"
+          style={{ backgroundImage: "url('/cocina.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
+        >
           <div className="absolute inset-0 bg-black/65" />
           <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">

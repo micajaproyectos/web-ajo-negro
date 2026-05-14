@@ -22,20 +22,12 @@ const PRODUCTS = [
   },
 ];
 
-import Image from "next/image";
-
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-charcoal text-white overflow-hidden">
-      {/* Hero background image */}
-      <Image
-        src="/hero_imagen.webp"
-        alt=""
-        fill
-        className="object-cover"
-        priority
-        aria-hidden="true"
-      />
+    <section
+      className="relative min-h-screen bg-charcoal text-white overflow-hidden"
+      style={{ backgroundImage: "url('/hero_imagen.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
+    >
 
       {/* Contrast overlay for readability */}
       <div className="absolute inset-0 bg-black/55" />
