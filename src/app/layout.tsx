@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import favicon from "./favicon.png";
 import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -235,6 +236,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         {children}
+        <GoogleAnalytics />
       </body>
     </html>
   );
