@@ -3,7 +3,6 @@ import { Geist } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import favicon from "./favicon.png";
 import "./globals.css";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -226,6 +225,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${geistSans.variable} ${playfair.variable} antialiased`}>
+      <head>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBJQXDEKBT" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FBJQXDEKBT');`,
+          }}
+        />
+      </head>
       <body>
         <script
           type="application/ld+json"
@@ -236,7 +244,6 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         {children}
-        <GoogleAnalytics />
       </body>
     </html>
   );
