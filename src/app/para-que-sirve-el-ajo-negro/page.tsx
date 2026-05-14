@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -224,30 +225,32 @@ export default function ParaQueSirvePage() {
         </section>
 
         {/* Ajo negro para la cocina gourmet */}
-        <section className="py-28 lg:py-36">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section className="relative py-28 lg:py-36 overflow-hidden">
+          <Image src="/cocina.webp" alt="" fill className="object-cover" aria-hidden="true" />
+          <div className="absolute inset-0 bg-black/65" />
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
               <div>
-                <p className="text-earth tracking-[0.3em] uppercase text-[11px] mb-4 font-sans">Gastronomía</p>
-                <h2 className="font-serif text-4xl lg:text-5xl mb-8 leading-[1.12]">
+                <p className="text-earth-light tracking-[0.3em] uppercase text-[11px] mb-4 font-sans">Gastronomía</p>
+                <h2 className="font-serif text-4xl lg:text-5xl mb-8 leading-[1.12] text-white">
                   Ajo Negro para
                   <br />
-                  <span className="text-earth">la Cocina Gourmet</span>
+                  <span className="text-earth-light">la Cocina Gourmet</span>
                 </h2>
-                <p className="text-charcoal/60 font-sans leading-relaxed mb-6">
+                <p className="text-white/60 font-sans leading-relaxed mb-6">
                   Más allá de sus propiedades para la salud, el ajo negro es un ingrediente gastronómico de alta valoración. Su sabor dulce, suave y con notas de umami lo convierte en un potenciador de platos que no compite con otros ingredientes, sino que los eleva.
                 </p>
-                <p className="text-charcoal/60 font-sans leading-relaxed">
+                <p className="text-white/60 font-sans leading-relaxed">
                   Chefs y cocineros de todo Chile lo incorporan en preparaciones que van desde lo más sencillo — un trozo de pan tostado — hasta elaboraciones de alta cocina como tartas, risottos y fondos de carne. No requiere cocción, aunque también resiste el calor sin perder sus características esenciales.
                 </p>
               </div>
               <div className="space-y-0">
                 {USOS_COCINA.map((item, i) => (
-                  <div key={item.uso} className={`flex items-start gap-6 py-6 ${i < USOS_COCINA.length - 1 ? "border-b border-charcoal/[0.06]" : ""}`}>
-                    <span className="font-serif text-2xl text-earth/40 shrink-0 leading-none mt-1">{String(i + 1).padStart(2, "0")}</span>
+                  <div key={item.uso} className={`flex items-start gap-6 py-6 ${i < USOS_COCINA.length - 1 ? "border-b border-white/[0.08]" : ""}`}>
+                    <span className="font-serif text-2xl text-earth-light/50 shrink-0 leading-none mt-1">{String(i + 1).padStart(2, "0")}</span>
                     <div>
-                      <p className="font-sans text-sm font-medium text-charcoal mb-1">{item.uso}</p>
-                      <p className="font-sans text-sm text-charcoal/45 leading-relaxed">{item.detalle}</p>
+                      <p className="font-sans text-sm font-medium text-white mb-1">{item.uso}</p>
+                      <p className="font-sans text-sm text-white/45 leading-relaxed">{item.detalle}</p>
                     </div>
                   </div>
                 ))}

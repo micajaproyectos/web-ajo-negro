@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ContactForm from "./ContactForm";
 import { trackEvent } from "@/lib/gtag";
 
@@ -27,15 +28,23 @@ const CONTACT_INFO = [
 
 export default function Contact() {
   return (
-    <section id="contacto" className="py-28 lg:py-36">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="contacto" className="relative py-28 lg:py-36 overflow-hidden">
+      <Image
+        src="/contacto.webp"
+        alt=""
+        fill
+        className="object-cover"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
-          <p className="text-earth tracking-[0.3em] uppercase text-[11px] mb-4 font-sans">
+          <p className="text-earth-light tracking-[0.3em] uppercase text-[11px] mb-4 font-sans">
             Hablemos
           </p>
-          <h2 className="font-serif text-4xl lg:text-5xl mb-6">Contáctanos</h2>
+          <h2 className="font-serif text-4xl lg:text-5xl mb-6 text-white">Contáctanos</h2>
           <div className="w-12 h-px bg-earth mx-auto mb-6" />
-          <p className="text-charcoal/45 max-w-lg mx-auto font-sans leading-relaxed">
+          <p className="text-white/50 max-w-lg mx-auto font-sans leading-relaxed">
             Cuéntanos qué formato necesitas y tu ciudad. Respondemos rápido.
           </p>
         </div>
@@ -43,39 +52,39 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 max-w-5xl mx-auto items-start">
           {/* Info */}
           <div>
-            <div className="h-px w-full bg-charcoal/[0.08] mb-10" />
-            <h3 className="font-serif text-xl mb-8">Información de contacto</h3>
+            <div className="h-px w-full bg-white/[0.12] mb-10" />
+            <h3 className="font-serif text-xl mb-8 text-white">Información de contacto</h3>
             <div className="space-y-6 mb-10">
               {CONTACT_INFO.map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-charcoal/[0.04] flex items-center justify-center shrink-0">
-                    <span className="text-earth text-xs font-sans font-medium">
+                  <div className="w-10 h-10 bg-white/[0.08] flex items-center justify-center shrink-0">
+                    <span className="text-earth-light text-xs font-sans font-medium">
                       {item.icon}
                     </span>
                   </div>
                   <div>
-                    <p className="text-[10px] text-charcoal/35 tracking-[0.2em] uppercase font-sans mb-1">
+                    <p className="text-[10px] text-white/35 tracking-[0.2em] uppercase font-sans mb-1">
                       {item.label}
                     </p>
                     {item.href ? (
                       <a
                         href={item.href}
-                        className="text-charcoal/70 hover:text-charcoal transition-colors font-sans text-sm"
+                        className="text-white/70 hover:text-white transition-colors font-sans text-sm"
                         target={item.href.startsWith("http") ? "_blank" : undefined}
                         rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-charcoal/70 font-sans text-sm">{item.value}</p>
+                      <p className="text-white/70 font-sans text-sm">{item.value}</p>
                     )}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="border-t border-charcoal/[0.06] pt-8">
-              <p className="text-charcoal/35 text-sm font-sans leading-relaxed mb-6">
+            <div className="border-t border-white/[0.10] pt-8">
+              <p className="text-white/40 text-sm font-sans leading-relaxed mb-6">
                 Para pedidos mayoristas, cuéntanos el volumen estimado y la
                 frecuencia. Nos adaptamos a tu negocio.
               </p>
@@ -103,8 +112,8 @@ export default function Contact() {
 
           {/* Formulario */}
           <div>
-            <div className="h-px w-full bg-charcoal/[0.08] mb-10" />
-            <h3 className="font-serif text-xl mb-8">Envíanos un mensaje</h3>
+            <div className="h-px w-full bg-white/[0.12] mb-10" />
+            <h3 className="font-serif text-xl mb-8 text-white">Envíanos un mensaje</h3>
             <ContactForm />
           </div>
         </div>
