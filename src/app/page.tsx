@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
@@ -97,6 +98,29 @@ export default function Home() {
         <Hero />
         <Products />
         <About />
+
+        {/* Links de contenido */}
+        <section className="py-16 bg-warm-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { label: "¿Para qué sirve el ajo negro?", href: "/para-que-sirve-el-ajo-negro" },
+                { label: "Beneficios y propiedades", href: "/beneficios-ajo-negro" },
+                { label: "¿Cómo consumirlo?", href: "/como-consumir-ajo-negro" },
+                { label: "Ajo negro vs ajo normal", href: "/ajo-negro-vs-ajo-normal" },
+              ].map((item) => (
+                <Link key={item.href} href={item.href} className="group flex items-center justify-between border border-charcoal/[0.07] p-6 bg-cream hover:shadow-md hover:shadow-charcoal/[0.04] transition-shadow duration-500">
+                  <div>
+                    <p className="text-[10px] tracking-[0.25em] uppercase text-earth font-sans mb-2">Guía</p>
+                    <p className="font-serif text-base group-hover:text-earth transition-colors duration-300">{item.label}</p>
+                  </div>
+                  <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 font-sans shrink-0 ml-4">→</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <Contact />
       </main>
       <Footer />

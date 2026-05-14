@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 const NAV_ITEMS = [
   { label: "Productos", href: "/productos" },
   { label: "Beneficios", href: "/beneficios-ajo-negro" },
+  { label: "Usos", href: "/para-que-sirve-el-ajo-negro" },
   { label: "Nosotros", href: "/#nosotros" },
   { label: "Contáctanos", href: "/#contacto" },
 ];

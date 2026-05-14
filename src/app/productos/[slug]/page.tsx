@@ -119,9 +119,9 @@ export default async function ProductoPage({ params }: Props) {
                 Ajo negro artesanal · Patagonia Chilena
               </p>
               <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.08] mb-8">
-                {product.name.split(" ").slice(0, -1).join(" ")}
+                {product.h1Main}
                 <br />
-                <span className="text-earth-light">{product.name.split(" ").slice(-1)}</span>.
+                <span className="text-earth-light">{product.h1Sub}</span>.
               </h1>
               <div className="w-16 h-px bg-earth mb-8" />
               <p className="text-lg text-white/50 leading-relaxed font-sans">
@@ -200,6 +200,25 @@ export default async function ProductoPage({ params }: Props) {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Guías de contenido */}
+        <section className="py-16 bg-warm-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <p className="text-[10px] tracking-[0.25em] uppercase text-charcoal/30 font-sans mb-6">Más sobre el producto</p>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {[
+                { label: "Beneficios y propiedades del ajo negro", href: "/beneficios-ajo-negro" },
+                { label: "¿Para qué sirve?", href: "/para-que-sirve-el-ajo-negro" },
+                { label: "¿Cómo consumirlo?", href: "/como-consumir-ajo-negro" },
+              ].map((item) => (
+                <Link key={item.href} href={item.href} className="group flex items-center justify-between border border-charcoal/[0.07] p-6 bg-cream hover:shadow-md hover:shadow-charcoal/[0.04] transition-shadow duration-500">
+                  <p className="font-serif text-base group-hover:text-earth transition-colors duration-300">{item.label}</p>
+                  <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 shrink-0 ml-4">→</span>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

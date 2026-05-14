@@ -8,12 +8,12 @@ const BASE_URL = "https://www.ajonegroaustral.cl";
 const WA_URL = `https://api.whatsapp.com/send/?phone=56974348843&text=${encodeURIComponent("Hola. Tengo una tienda de productos naturales y quiero cotizar ajo negro Austral.")}&type=phone_number&app_absent=0`;
 
 export const metadata: Metadata = {
-  title: "Ajo Negro para Tiendas Naturales | Distribuidor Chile",
+  title: "Ajo Negro para Tiendas Naturales en Chile",
   description:
-    "Distribuidor de ajo negro artesanal para tiendas de productos naturales y gourmet en Chile. Origen Patagonia, sin aditivos. Mayorista desde 20 unidades. Envío a todo Chile.",
+    "Ajo negro artesanal para tiendas naturales y gourmet en Chile. Venta mayorista desde 20 unidades.",
   alternates: { canonical: `${BASE_URL}/ajo-negro-para-tiendas` },
   openGraph: {
-    title: "Ajo Negro para Tiendas Naturales | Distribuidor Chile",
+    title: "Ajo Negro para Tiendas Naturales en Chile",
     description:
       "Distribuidor de ajo negro artesanal para tiendas naturales y gourmet. Origen Patagonia Chilena. Mayorista desde 20 unidades.",
     url: `${BASE_URL}/ajo-negro-para-tiendas`,
@@ -114,9 +114,9 @@ export default function TiendasPage() {
                 Tiendas naturales · Distribución
               </p>
               <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.08] mb-8">
-                Ajo Negro para
+                Ajo Negro Mayorista
                 <br />
-                <span className="text-earth-light">Tiendas Naturales</span>.
+                <span className="text-earth-light">para Tiendas Naturales</span>.
               </h1>
               <div className="w-16 h-px bg-earth mb-8" />
               <p className="text-lg text-white/50 leading-relaxed font-sans mb-12">
@@ -204,6 +204,25 @@ export default function TiendasPage() {
                 </div>
               ))}
               <div className="border-t border-charcoal/[0.06]" />
+            </div>
+          </div>
+        </section>
+
+        {/* Guías de contenido */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <p className="text-[10px] tracking-[0.25em] uppercase text-charcoal/30 font-sans mb-6">Más sobre el producto</p>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {[
+                { label: "Beneficios y propiedades del ajo negro", href: "/beneficios-ajo-negro" },
+                { label: "¿Para qué sirve el ajo negro?", href: "/para-que-sirve-el-ajo-negro" },
+                { label: "¿Cómo consumir ajo negro?", href: "/como-consumir-ajo-negro" },
+              ].map((item) => (
+                <Link key={item.href} href={item.href} className="group flex items-center justify-between border border-charcoal/[0.07] p-6 bg-warm-white hover:shadow-md hover:shadow-charcoal/[0.04] transition-shadow duration-500">
+                  <p className="font-serif text-base group-hover:text-earth transition-colors duration-300">{item.label}</p>
+                  <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 shrink-0 ml-4">→</span>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

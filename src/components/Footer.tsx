@@ -4,9 +4,15 @@ import Link from "next/link";
 const NAV_LINKS = [
   { label: "Inicio", href: "/" },
   { label: "Productos", href: "/productos" },
-  { label: "Beneficios del ajo negro", href: "/beneficios-ajo-negro" },
   { label: "Nosotros", href: "/#nosotros" },
   { label: "Contáctanos", href: "/#contacto" },
+];
+
+const GUIAS_LINKS = [
+  { label: "Beneficios del ajo negro", href: "/beneficios-ajo-negro" },
+  { label: "¿Para qué sirve?", href: "/para-que-sirve-el-ajo-negro" },
+  { label: "Cómo consumirlo", href: "/como-consumir-ajo-negro" },
+  { label: "Ajo negro vs ajo normal", href: "/ajo-negro-vs-ajo-normal" },
 ];
 
 const MAYORISTA_LINKS = [
@@ -19,7 +25,7 @@ export default function Footer() {
   return (
     <footer className="bg-charcoal text-white py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid sm:grid-cols-4 gap-12 items-start mb-16">
+        <div className="grid sm:grid-cols-5 gap-10 items-start mb-16">
           {/* Brand */}
           <div>
             <Link href="/" aria-label="Ajo Negro Austral" className="inline-block mb-4">
@@ -43,6 +49,24 @@ export default function Footer() {
             </h4>
             <nav className="flex flex-col gap-3">
               {NAV_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-white/40 hover:text-white/80 transition-colors text-sm font-sans"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Guías */}
+          <div>
+            <h4 className="text-[10px] tracking-[0.25em] uppercase text-white/25 mb-5 font-sans">
+              Guías
+            </h4>
+            <nav className="flex flex-col gap-3">
+              {GUIAS_LINKS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

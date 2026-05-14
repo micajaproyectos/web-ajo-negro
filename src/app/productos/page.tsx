@@ -9,9 +9,9 @@ import { products, productSlugs } from "@/lib/products";
 const BASE_URL = "https://www.ajonegroaustral.cl";
 
 export const metadata: Metadata = {
-  title: "Productos | Ajo Negro Artesanal Patagonia Chilena",
+  title: "Productos de Ajo Negro Artesanal",
   description:
-    "Bolsas de ajo negro artesanal de 60 g y 100 g, y pedidos mayoristas para restaurantes y tiendas naturales. Producido en Futaleufú, Patagonia Chilena. Envío a todo Chile.",
+    "Compra ajo negro artesanal en formatos 60g, 100g y pedidos mayoristas. Producción local desde Futaleufú.",
   alternates: {
     canonical: `${BASE_URL}/productos`,
   },
@@ -49,9 +49,9 @@ export default function ProductosPage() {
                 Ajo negro artesanal · Patagonia Chilena
               </p>
               <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.08] mb-8">
-                Nuestros
+                Productos de
                 <br />
-                <span className="text-earth-light">Productos</span>.
+                <span className="text-earth-light">Ajo Negro Artesanal</span>.
               </h1>
               <div className="w-16 h-px bg-earth mb-8" />
               <p className="text-lg text-white/50 leading-relaxed font-sans">

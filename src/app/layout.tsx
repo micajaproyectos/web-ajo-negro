@@ -21,11 +21,11 @@ const BASE_URL = "https://www.ajonegroaustral.cl";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Ajo Negro Austral | Patagonia Chilena",
-    template: "%s | Ajo Negro Austral",
+    default: "Ajo Negro Artesanal de la Patagonia Chilena",
+    template: "%s",
   },
   description:
-    "Productores de ajo negro artesanal en Futaleufú, Patagonia Chilena. Proveedor mayorista para restaurantes y tiendas de productos naturales. Envío a todo Chile por Starken y Bluexpress.",
+    "Ajo negro artesanal producido en Futaleufú, Patagonia Chilena. Venta mayorista para restaurantes y tiendas naturales.",
   keywords: [
     "ajo negro Chile",
     "ajo negro Patagonia",

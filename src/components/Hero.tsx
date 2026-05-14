@@ -59,11 +59,13 @@ export default function Hero() {
               Ajo negro premium · Patagonia Chilena
             </p>
 
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.08] mb-8">
-              Sabor único
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.08] mb-4">
+              Ajo Negro Artesanal
               <br />
-              <span className="text-earth-light">del sur</span>.
+              <span className="text-earth-light">de la Patagonia Chilena</span>.
             </h1>
+
+            <p className="font-serif text-xl text-white/35 italic mb-8">Sabor único del sur.</p>
 
             <div className="w-16 h-px bg-earth mb-8" />
 
