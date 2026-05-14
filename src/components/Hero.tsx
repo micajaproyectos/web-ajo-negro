@@ -22,21 +22,20 @@ const PRODUCTS = [
   },
 ];
 
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen bg-charcoal text-white overflow-hidden">
-      {/* Hero background video */}
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
+      {/* Hero background image */}
+      <Image
+        src="/hero_imagen.webp"
+        alt=""
+        fill
+        className="object-cover"
+        priority
         aria-hidden="true"
-      >
-        <source src="/videos/hero-ajo-negro.mp4" type="video/mp4" />
-      </video>
+      />
 
       {/* Contrast overlay for readability */}
       <div className="absolute inset-0 bg-black/55" />
