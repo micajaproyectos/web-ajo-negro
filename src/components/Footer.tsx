@@ -5,18 +5,24 @@ const NAV_LINKS = [
   { label: "Inicio", href: "/" },
   { label: "Productos", href: "/productos" },
   { label: "Beneficios del ajo negro", href: "/beneficios-ajo-negro" },
-  { label: "Nosotros", href: "#nosotros" },
-  { label: "Contáctanos", href: "#contacto" },
+  { label: "Nosotros", href: "/#nosotros" },
+  { label: "Contáctanos", href: "/#contacto" },
+];
+
+const MAYORISTA_LINKS = [
+  { label: "Compra mayorista", href: "/ajo-negro-mayorista" },
+  { label: "Para restaurantes", href: "/ajo-negro-para-restaurantes" },
+  { label: "Para tiendas naturales", href: "/ajo-negro-para-tiendas" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-charcoal text-white py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid sm:grid-cols-3 gap-12 items-start mb-16">
+        <div className="grid sm:grid-cols-4 gap-12 items-start mb-16">
           {/* Brand */}
           <div>
-            <a href="#" aria-label="Ajo Negro Austral" className="inline-block mb-4">
+            <Link href="/" aria-label="Ajo Negro Austral" className="inline-block mb-4">
               <Image
                 src="/logo-ajo-austral.png"
                 alt="Logo Ajo Negro Austral"
@@ -24,7 +30,7 @@ export default function Footer() {
                 height={44}
                 className="h-8 w-auto"
               />
-            </a>
+            </Link>
             <p className="text-white/25 text-sm font-sans leading-relaxed max-w-[220px]">
               Ajo negro cultivado en la Patagonia Chilena. Sabor único del sur.
             </p>
@@ -37,6 +43,24 @@ export default function Footer() {
             </h4>
             <nav className="flex flex-col gap-3">
               {NAV_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-white/40 hover:text-white/80 transition-colors text-sm font-sans"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Mayorista */}
+          <div>
+            <h4 className="text-[10px] tracking-[0.25em] uppercase text-white/25 mb-5 font-sans">
+              Mayoristas
+            </h4>
+            <nav className="flex flex-col gap-3">
+              {MAYORISTA_LINKS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

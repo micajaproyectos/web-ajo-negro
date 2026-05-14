@@ -30,6 +30,14 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "¿Para qué sirve el ajo negro?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El ajo negro sirve para reforzar el sistema inmune, reducir el colesterol LDL, mejorar la circulación y como antiinflamatorio natural. También se usa ampliamente en gastronomía gracias a su sabor suave, dulce y umami. A diferencia del ajo blanco, no produce olor fuerte ni molestias digestivas, lo que lo hace ideal para consumo diario.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "¿Qué es el ajo negro y cómo se produce?",
       acceptedAnswer: {
         "@type": "Answer",

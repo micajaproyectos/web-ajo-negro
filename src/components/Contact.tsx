@@ -1,3 +1,8 @@
+"use client";
+
+import ContactForm from "./ContactForm";
+import { trackEvent } from "@/lib/gtag";
+
 const WHATSAPP_MESSAGE =
   "Hola. Me gustaría cotizar sus productos de Ajo Negro Austral al mayorista.";
 const WHATSAPP_LINK = `https://api.whatsapp.com/send/?phone=56974348843&text=${encodeURIComponent(
@@ -35,43 +40,42 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="mx-auto max-w-2xl">
-          {/* Contact info */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="font-serif text-xl mb-6">Información</h3>
-              <div className="space-y-5">
-                {CONTACT_INFO.map((item) => (
-                  <div key={item.label} className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-charcoal/[0.04] flex items-center justify-center shrink-0">
-                      <span className="text-earth text-xs font-sans font-medium">
-                        {item.icon}
-                      </span>
-                    </div>
-                    <div>
-                      <p className="text-[10px] text-charcoal/35 tracking-[0.2em] uppercase font-sans mb-1">
-                        {item.label}
-                      </p>
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          className="text-charcoal/70 hover:text-charcoal transition-colors font-sans text-sm"
-                        >
-                          {item.value}
-                        </a>
-                      ) : (
-                        <p className="text-charcoal/70 font-sans text-sm">
-                          {item.value}
-                        </p>
-                      )}
-                    </div>
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 max-w-5xl mx-auto items-start">
+          {/* Info */}
+          <div>
+            <div className="h-px w-full bg-charcoal/[0.08] mb-10" />
+            <h3 className="font-serif text-xl mb-8">Información de contacto</h3>
+            <div className="space-y-6 mb-10">
+              {CONTACT_INFO.map((item) => (
+                <div key={item.label} className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-charcoal/[0.04] flex items-center justify-center shrink-0">
+                    <span className="text-earth text-xs font-sans font-medium">
+                      {item.icon}
+                    </span>
                   </div>
-                ))}
-              </div>
+                  <div>
+                    <p className="text-[10px] text-charcoal/35 tracking-[0.2em] uppercase font-sans mb-1">
+                      {item.label}
+                    </p>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="text-charcoal/70 hover:text-charcoal transition-colors font-sans text-sm"
+                        target={item.href.startsWith("http") ? "_blank" : undefined}
+                        rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-charcoal/70 font-sans text-sm">{item.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
 
             <div className="border-t border-charcoal/[0.06] pt-8">
-              <p className="text-charcoal/35 text-sm font-sans leading-relaxed">
+              <p className="text-charcoal/35 text-sm font-sans leading-relaxed mb-6">
                 Para pedidos mayoristas, cuéntanos el volumen estimado y la
                 frecuencia. Nos adaptamos a tu negocio.
               </p>
@@ -79,8 +83,9 @@ export default function Contact() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 bg-[#25D366] px-5 py-3.5 text-sm font-sans font-medium text-white transition-colors hover:bg-[#1eb95a]"
-                aria-label="Contactar por WhatsApp para cotización mayorista"
+                className="inline-flex w-full items-center justify-center gap-2 bg-[#25D366] px-5 py-3.5 text-sm font-sans font-medium text-white transition-colors hover:bg-[#1eb95a]"
+                aria-label="Contactar por WhatsApp"
+                onClick={() => trackEvent("generate_lead", { method: "whatsapp", source: "contact_section" })}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -94,6 +99,13 @@ export default function Contact() {
                 Cotizar por WhatsApp
               </a>
             </div>
+          </div>
+
+          {/* Formulario */}
+          <div>
+            <div className="h-px w-full bg-charcoal/[0.08] mb-10" />
+            <h3 className="font-serif text-xl mb-8">Envíanos un mensaje</h3>
+            <ContactForm />
           </div>
         </div>
       </div>

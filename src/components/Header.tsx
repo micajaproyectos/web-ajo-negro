@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const NAV_ITEMS = [
-  { label: "Productos", href: "#productos" },
+  { label: "Productos", href: "/productos" },
   { label: "Beneficios", href: "/beneficios-ajo-negro" },
-  { label: "Nosotros", href: "#nosotros" },
-  { label: "Contáctanos", href: "#contacto" },
+  { label: "Nosotros", href: "/#nosotros" },
+  { label: "Contáctanos", href: "/#contacto" },
 ];
 
 export default function Header() {
@@ -36,8 +36,8 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <a
-            href="#"
+          <Link
+            href="/"
             className={`transition-all duration-500 ${
               scrolled ? "opacity-100" : "opacity-95"
             }`}
@@ -51,7 +51,7 @@ export default function Header() {
               priority
               className="h-8 w-auto"
             />
-          </a>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             {NAV_ITEMS.map((item) => (

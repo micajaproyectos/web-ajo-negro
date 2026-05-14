@@ -47,7 +47,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com",
-              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.clarity.ms https://dc.services.visualstudio.com",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.clarity.ms https://dc.services.visualstudio.com https://script.google.com https://script.googleusercontent.com",
               "media-src 'self'",
               "frame-src 'none'",
               "object-src 'none'",

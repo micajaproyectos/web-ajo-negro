@@ -1,3 +1,7 @@
+"use client";
+
+import { trackEvent } from "@/lib/gtag";
+
 const WHATSAPP_MESSAGE =
   "Hola. Me gustaría cotizar sus productos de Ajo Negro Austral.";
 const WHATSAPP_LINK = `https://api.whatsapp.com/send/?phone=56974348843&text=${encodeURIComponent(
@@ -11,6 +15,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
+      onClick={() => trackEvent("generate_lead", { method: "whatsapp", source: "floating_button" })}
       className="
         group fixed bottom-7 right-7 z-50
         flex items-center gap-3
@@ -29,7 +34,6 @@ export default function WhatsAppButton() {
       <span className="w-px h-4 bg-earth/40" aria-hidden="true" />
 
       <span className="relative flex items-center justify-center w-7 h-7">
-        {/* subtle green dot indicator */}
         <span className="absolute top-0 right-0 w-2 h-2 rounded-full bg-[#25D366] ring-2 ring-charcoal group-hover:ring-earth-dark transition-colors duration-300" aria-hidden="true" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
