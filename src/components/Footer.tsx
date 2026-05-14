@@ -1,7 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Productos", href: "#productos" },
+  { label: "Inicio", href: "/" },
+  { label: "Productos", href: "/productos" },
+  { label: "Beneficios del ajo negro", href: "/beneficios-ajo-negro" },
   { label: "Nosotros", href: "#nosotros" },
   { label: "Contáctanos", href: "#contacto" },
 ];
@@ -34,13 +37,13 @@ export default function Footer() {
             </h4>
             <nav className="flex flex-col gap-3">
               {NAV_LINKS.map((item) => (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   className="text-white/40 hover:text-white/80 transition-colors text-sm font-sans"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

@@ -1,6 +1,7 @@
- "use client";
+"use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const PRODUCTS = [
@@ -12,7 +13,8 @@ const PRODUCTS = [
       "Perfecta para regalos gourmet",
       "Recomendada para degustación",
     ],
-    cta: "Comprar 60 g",
+    cta: "Ver producto",
+    href: "/productos/bolsa-60g",
     highlight: false,
     image: "/productos/bolsa-60g.png",
   },
@@ -24,7 +26,8 @@ const PRODUCTS = [
       "Cocina diaria con toque gourmet",
       "Ideal para preparaciones y salsas",
     ],
-    cta: "Comprar 100 g",
+    cta: "Ver producto",
+    href: "/productos/bolsa-100g",
     highlight: true,
     image: "/productos/bolsa-100g.png",
   },
@@ -37,6 +40,7 @@ const PRODUCTS = [
       "Condiciones según volumen",
     ],
     cta: "Solicitar cotización",
+    href: "/productos/pedido-mayorista",
     highlight: false,
     image: "/productos/mayorista.png",
     backgroundImage: "/productos/fondo-productos.png",
@@ -174,8 +178,8 @@ export default function Products() {
                   ))}
                 </ul>
 
-                <a
-                  href="#contacto"
+                <Link
+                  href={p.href}
                   className={`inline-flex items-center justify-center px-6 py-3.5 text-sm tracking-widest uppercase font-sans transition-colors duration-300 ${
                     p.highlight
                       ? "bg-white text-charcoal hover:bg-earth-light"
@@ -185,7 +189,7 @@ export default function Products() {
                   }`}
                 >
                   {p.cta}
-                </a>
+                </Link>
               </div>
             </article>
           ))}

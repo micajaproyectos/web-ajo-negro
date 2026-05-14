@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const NAV_ITEMS = [
   { label: "Productos", href: "#productos" },
+  { label: "Beneficios", href: "/beneficios-ajo-negro" },
   { label: "Nosotros", href: "#nosotros" },
   { label: "Contáctanos", href: "#contacto" },
 ];
@@ -53,7 +55,7 @@ export default function Header() {
 
           <nav className="hidden md:flex items-center gap-8">
             {NAV_ITEMS.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className={`text-[11px] tracking-[0.2em] uppercase transition-colors duration-500 ${
@@ -63,7 +65,7 @@ export default function Header() {
                 }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -104,14 +106,14 @@ export default function Header() {
       >
         <nav className="flex flex-col items-center gap-10">
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               onClick={() => setMenuOpen(false)}
               className="font-serif text-3xl text-white/70 hover:text-white transition-colors"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
