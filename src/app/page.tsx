@@ -121,6 +121,26 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FAQ */}
+        <section className="py-28 lg:py-36">
+          <div className="max-w-3xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <p className="text-earth tracking-[0.3em] uppercase text-[11px] mb-4 font-sans">Preguntas frecuentes</p>
+              <h2 className="font-serif text-4xl lg:text-5xl mb-6">Lo que nos preguntan</h2>
+              <div className="w-12 h-px bg-earth mx-auto" />
+            </div>
+            <div className="space-y-px">
+              {faqSchema.mainEntity.map((item) => (
+                <div key={item.name} className="border-t border-charcoal/[0.06] py-8">
+                  <h3 className="font-serif text-xl mb-3">{item.name}</h3>
+                  <p className="text-charcoal/55 font-sans text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+                </div>
+              ))}
+              <div className="border-t border-charcoal/[0.06]" />
+            </div>
+          </div>
+        </section>
+
         <Contact />
       </main>
       <Footer />

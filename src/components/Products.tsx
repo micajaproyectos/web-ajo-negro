@@ -17,6 +17,7 @@ const PRODUCTS = [
     href: "/productos/bolsa-60g",
     highlight: false,
     image: "/productos/bolsa-60g.png",
+    imageAlt: "Bolsa de ajo negro artesanal 60g producida en Futaleufú, Patagonia Chilena — Ajo Negro Austral",
   },
   {
     name: "Bolsa 100 g",
@@ -30,6 +31,7 @@ const PRODUCTS = [
     href: "/productos/bolsa-100g",
     highlight: true,
     image: "/productos/bolsa-100g.png",
+    imageAlt: "Bolsa de ajo negro artesanal 100g producida en Futaleufú, Patagonia Chilena — Ajo Negro Austral",
   },
   {
     name: "Pedidos mayoristas",
@@ -43,6 +45,7 @@ const PRODUCTS = [
     href: "/productos/pedido-mayorista",
     highlight: false,
     image: "/productos/mayorista.png",
+    imageAlt: "Pedido mayorista de ajo negro artesanal para restaurantes y tiendas — Ajo Negro Austral",
     backgroundImage: "/productos/fondo-productos.png",
   },
 ];
@@ -109,7 +112,7 @@ export default function Products() {
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={p.image}
-                      alt={p.name}
+                      alt={p.imageAlt}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-contain p-5"

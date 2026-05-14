@@ -9,6 +9,7 @@ export type Product = {
   price: string;
   priceCurrency: "CLP";
   image: string;
+  imageAlt: string;
   weightGrams?: number;
   pricePerKg?: boolean;
   minQuantity?: number;
@@ -28,6 +29,7 @@ export const products: Record<string, Product> = {
     price: "1800",
     priceCurrency: "CLP",
     image: "/productos/bolsa-60g.png",
+    imageAlt: "Bolsa de ajo negro artesanal 60g producida en Futaleufú, Patagonia Chilena — Ajo Negro Austral",
     weightGrams: 60,
   },
   "bolsa-100g": {
@@ -43,6 +45,7 @@ export const products: Record<string, Product> = {
     price: "3400",
     priceCurrency: "CLP",
     image: "/productos/bolsa-100g.png",
+    imageAlt: "Bolsa de ajo negro artesanal 100g producida en Futaleufú, Patagonia Chilena — Ajo Negro Austral",
     weightGrams: 100,
   },
   "pedido-mayorista": {
@@ -58,6 +61,7 @@ export const products: Record<string, Product> = {
     price: "27500",
     priceCurrency: "CLP",
     image: "/productos/mayorista.png",
+    imageAlt: "Pedido mayorista de ajo negro artesanal para restaurantes y tiendas — Ajo Negro Austral",
     pricePerKg: true,
     minQuantity: 20,
   },

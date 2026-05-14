@@ -86,7 +86,7 @@ export default function ProductosPage() {
                       <div className="relative aspect-[4/3]">
                         <Image
                           src={product.image}
-                          alt={product.name}
+                          alt={product.imageAlt}
                           fill
                           sizes="(max-width: 768px) 100vw, 33vw"
                           className="object-contain p-5"

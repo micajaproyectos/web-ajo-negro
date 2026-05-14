@@ -142,7 +142,7 @@ export default async function ProductoPage({ params }: Props) {
                 <div className="relative aspect-square">
                   <Image
                     src={product.image}
-                    alt={product.name}
+                    alt={product.imageAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-contain p-10"
