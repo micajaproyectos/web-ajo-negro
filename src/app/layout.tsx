@@ -158,36 +158,21 @@ const organizationSchema = {
     itemListElement: [
       {
         "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "Bolsa Ajo Negro 60 g",
-          description:
-            "Bolsa de ajo negro artesanal de 60 gramos. Fermentado artesanalmente en Futaleufú, Patagonia Chilena.",
-        },
+        itemOffered: { "@id": `${BASE_URL}/productos/bolsa-60g` },
         price: "1800",
         priceCurrency: "CLP",
         availability: "https://schema.org/InStock",
       },
       {
         "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "Bolsa Ajo Negro 100 g",
-          description:
-            "Bolsa de ajo negro artesanal de 100 gramos. Fermentado artesanalmente en Futaleufú, Patagonia Chilena.",
-        },
+        itemOffered: { "@id": `${BASE_URL}/productos/bolsa-100g` },
         price: "3400",
         priceCurrency: "CLP",
         availability: "https://schema.org/InStock",
       },
       {
         "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "Pedido Mayorista Ajo Negro",
-          description:
-            "Pedido mayorista de ajo negro (mínimo 20 unidades de 60 g o 100 g). Para restaurantes y revendedores de productos naturales. Precio $27.500 por kilo.",
-        },
+        itemOffered: { "@id": `${BASE_URL}/productos/pedido-mayorista` },
         price: "27500",
         priceCurrency: "CLP",
         priceSpecification: {
