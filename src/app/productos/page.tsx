@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { products, productSlugs } from "@/lib/products";
 
-const BASE_URL = "https://www.ajonegroaustral.cl";
+const BASE_URL = "https://ajonegroaustral.cl";
 
 export const metadata: Metadata = {
   title: "Productos de Ajo Negro Artesanal",
