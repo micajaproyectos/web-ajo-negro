@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { productSlugs } from "@/lib/products";
 
-const BASE_URL = "https://ajonegroaustral.cl";
+const BASE_URL = "https://www.ajonegroaustral.cl";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

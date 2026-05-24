@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const BASE_URL = "https://ajonegroaustral.cl";
+const BASE_URL = "https://www.ajonegroaustral.cl";
 const WA_URL = `https://api.whatsapp.com/send/?phone=56974348843&text=${encodeURIComponent("Hola. Soy de un restaurante y quiero cotizar ajo negro Austral al por mayor.")}&type=phone_number&app_absent=0`;
 
 export const metadata: Metadata = {
