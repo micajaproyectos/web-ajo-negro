@@ -56,7 +56,7 @@ export default function ProductosPage() {
               <div className="w-16 h-px bg-earth mb-8" />
               <p className="text-lg text-white/50 leading-relaxed font-sans">
                 Ajo negro producido artesanalmente en Futaleufú, Patagonia. Fermentación
-                natural sin aditivos. Bolsas individuales y pedidos mayoristas para
+                natural sin aditivos. Bolsas de ajo negro y pedidos mayoristas para
                 restaurantes y tiendas de productos naturales.
               </p>
             </div>

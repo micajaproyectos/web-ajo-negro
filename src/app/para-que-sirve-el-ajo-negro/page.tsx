@@ -8,14 +8,14 @@ const BASE_URL = "https://www.ajonegroaustral.cl";
 const WA_URL = `https://api.whatsapp.com/send/?phone=56974348843&text=${encodeURIComponent("Hola. Me gustaría saber más sobre el ajo negro Austral.")}&type=phone_number&app_absent=0`;
 
 export const metadata: Metadata = {
-  title: "¿Para qué sirve el Ajo Negro? Usos y Beneficios",
+  title: "¿Para qué sirve el Ajo Negro? Adelgazar, Presión, Diabetes y Más",
   description:
-    "El ajo negro sirve para fortalecer el sistema inmune, cuidar el corazón, reducir el colesterol y como ingrediente gourmet. Descubre todos sus usos.",
+    "El ajo negro sirve para adelgazar, bajar la presión, reducir el colesterol, la diabetes, el hígado graso y la memoria. Guía completa de usos y beneficios.",
   alternates: { canonical: `${BASE_URL}/para-que-sirve-el-ajo-negro` },
   openGraph: {
-    title: "¿Para qué sirve el Ajo Negro? Usos y Beneficios",
+    title: "¿Para qué sirve el Ajo Negro? Adelgazar, Presión, Diabetes y Más",
     description:
-      "El ajo negro sirve para fortalecer el sistema inmune, cuidar el corazón, reducir el colesterol y como ingrediente gourmet.",
+      "El ajo negro sirve para adelgazar, bajar la presión, reducir el colesterol, la diabetes, el hígado graso y la memoria. Guía completa de usos y beneficios.",
     url: `${BASE_URL}/para-que-sirve-el-ajo-negro`,
   },
 };
@@ -34,10 +34,18 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿Para qué sirve el ajo negro en ayunas?",
+      name: "¿El ajo negro sirve para adelgazar?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Consumir ajo negro en ayunas permite que sus compuestos bioactivos, especialmente la S-alilcisteína (SAC), sean absorbidos con mayor eficiencia antes de que otros alimentos interfieran en el proceso digestivo. Se recomienda 1 a 2 dientes con agua o con un poco de pan.",
+        text: "El ajo negro no es un quemador de grasa directo, pero contribuye al control del peso de varias formas: actúa como prebiótico mejorando la microbiota intestinal (clave en el metabolismo), reduce la inflamación crónica de bajo grado asociada a la obesidad, y mejora la sensibilidad a la insulina. Incorporado en una alimentación equilibrada, puede ser un apoyo real para quienes buscan perder peso o mantenerlo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿El ajo negro sirve para bajar la presión arterial?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí. El ajo negro tiene un efecto vasodilatador gracias a sus compuestos organosulfurados, que relajan los vasos sanguíneos y mejoran la circulación. Estudios han documentado reducciones modestas pero consistentes de la presión sistólica en personas con hipertensión leve-moderada tras 8–12 semanas de consumo regular. No reemplaza la medicación antihipertensiva, pero es un complemento natural reconocido.",
       },
     },
     {
@@ -45,23 +53,71 @@ const faqSchema = {
       name: "¿El ajo negro sirve para bajar el colesterol?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. Varios estudios señalan que el consumo regular de ajo negro contribuye a reducir el colesterol LDL (malo) y los triglicéridos, gracias a sus antioxidantes y compuestos organosulfurados. No reemplaza tratamientos médicos, pero es un complemento natural documentado.",
+        text: "Sí. El consumo regular de ajo negro contribuye a reducir el colesterol LDL (colesterol malo) y los triglicéridos, mientras mantiene o eleva el HDL (colesterol bueno). Este efecto se debe a sus antioxidantes y compuestos organosulfurados que inhiben la síntesis hepática de colesterol. Los resultados son acumulativos: se notan tras varias semanas de consumo constante.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Para qué sirve el ajo negro para la presión arterial?",
+      name: "¿El ajo negro sirve para la diabetes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El ajo negro tiene un leve efecto vasodilatador que puede contribuir a reducir la presión arterial en personas con hipertensión leve. Su efecto es gradual y se potencia con consumo regular. Consultar con un médico antes de usarlo como complemento a un tratamiento.",
+        text: "El ajo negro puede ser beneficioso como complemento en personas con diabetes tipo 2 o prediabetes: mejora la sensibilidad a la insulina, ayuda a regular los niveles de glucosa en sangre y reduce la inflamación asociada a la resistencia insulínica. Su índice glucémico es muy bajo, lo que lo hace seguro para diabéticos. Siempre consultar con el médico antes de incorporarlo como parte del tratamiento.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuánto ajo negro se recomienda tomar al día?",
+      name: "¿El ajo negro sirve para el hígado?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La dosis habitual recomendada es de 1 a 3 dientes de ajo negro al día. Puede consumirse directamente, con pan, en ensaladas o incorporado en preparaciones calientes. Al ser fermentado, su digestión es mucho más suave que la del ajo crudo.",
+        text: "Sí. El ajo negro tiene propiedades hepatoprotectoras: estimula la producción de enzimas hepáticas que facilitan la eliminación de toxinas, reduce la oxidación de las células del hígado y puede contribuir a disminuir la grasa hepática acumulada (hígado graso). Su alta concentración de antioxidantes —mayor que la del ajo crudo— lo hace especialmente útil para apoyar la función hepática de forma natural.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿El ajo negro sirve para la memoria y el cerebro?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí. La S-alilcisteína (SAC), compuesto principal del ajo negro, ha mostrado efectos neuroprotectores en estudios: reduce el estrés oxidativo en las células neuronales, mejora la circulación cerebral y puede proteger contra el deterioro cognitivo asociado al envejecimiento. Su consumo regular se asocia con mayor claridad mental y mejor concentración, aunque los efectos son graduales y se potencian a largo plazo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿El ajo negro sirve para la artritis o el dolor articular?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El ajo negro actúa como antiinflamatorio natural al inhibir vías inflamatorias crónicas (como la COX-2), lo que puede reducir el dolor y la rigidez articular en personas con artritis. No sustituye el tratamiento médico, pero como complemento dietario puede contribuir a disminuir la inflamación sistémica que agrava los síntomas articulares.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿El ajo negro sirve para el cabello?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El ajo negro favorece la salud del cabello desde adentro: su alto contenido antioxidante protege los folículos pilosos del daño oxidativo, mientras que su aporte de zinc y compuestos sulfurados —necesarios para la síntesis de queratina— puede fortalecer el cabello y reducir su caída. Los resultados son más notorios con consumo continuo durante varios meses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿El ajo negro sirve para los triglicéridos?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí. Varios estudios muestran que el ajo negro reduce los triglicéridos en sangre de forma significativa con consumo regular. Este efecto se produce gracias a sus compuestos organosulfurados que interfieren en la síntesis de lípidos en el hígado. Es especialmente útil como complemento en personas con hipertrigliceridemia leve asociada a dieta o síndrome metabólico.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿El ajo negro sirve para el sistema inmune?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, es uno de sus usos más documentados. El ajo negro estimula la actividad de los linfocitos NK (células asesinas naturales) y aumenta la producción de citoquinas antiinflamatorias, reforzando las defensas del organismo frente a virus y bacterias. Al ser fermentado, sus compuestos bioactivos se absorben mucho mejor que los del ajo crudo, lo que potencia su efecto inmunoestimulante.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Para qué sirve el ajo negro en ayunas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Consumir ajo negro en ayunas permite que sus compuestos bioactivos, especialmente la S-alilcisteína (SAC), sean absorbidos con mayor eficiencia antes de que otros alimentos interfieran en el proceso digestivo. Se recomienda 1 a 2 dientes con agua o con un poco de pan.",
       },
     },
     {
@@ -74,10 +130,18 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿El ajo negro sirve para adelgazar?",
+      name: "¿Cuánto ajo negro se recomienda tomar al día?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El ajo negro no es un quemador de grasa directo, pero su efecto prebiótico mejora la salud digestiva y su capacidad antioxidante reduce la inflamación crónica, dos factores relacionados con el control del peso. Puede ser un complemento útil dentro de una alimentación equilibrada.",
+        text: "La dosis habitual recomendada es de 1 a 3 dientes de ajo negro al día. Puede consumirse directamente, con pan, en ensaladas o incorporado en preparaciones calientes. Al ser fermentado, su digestión es mucho más suave que la del ajo crudo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Tiene contraindicaciones el ajo negro?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El ajo negro es seguro para la mayoría de las personas. Sin embargo, se recomienda precaución en quienes toman anticoagulantes (el ajo puede potenciar su efecto), en casos de alergia al ajo, y en mujeres embarazadas o en lactancia (consultar al médico). Al ser fermentado, tolera mejor el estómago que el ajo crudo, pero en dosis muy altas puede causar malestar digestivo leve.",
       },
     },
   ],

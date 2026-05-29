@@ -48,7 +48,7 @@ const faqSchema = {
       name: "¿Cuánto cuesta el ajo negro?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Las bolsas individuales tienen un precio de $1.800 CLP (60 g) y $3.400 CLP (100 g). Para pedidos mayoristas de 20 o más unidades (60 g o 100 g), el precio es de $27.500 por kilo. Envío a todo Chile por Starken o Bluexpress.",
+        text: "El precio mayorista es de $1.800 CLP por bolsa de 60 g y $3.400 CLP por bolsa de 100 g. El precio de referencia por kilo es $27.500 CLP para pedidos de 20 unidades o más. Envío a todo Chile por Starken o Bluexpress.",
       },
     },
     {

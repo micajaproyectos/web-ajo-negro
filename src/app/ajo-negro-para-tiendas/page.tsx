@@ -89,7 +89,7 @@ const ARGUMENTOS = [
   { num: "02", title: "Origen con relato", body: "Producido artesanalmente en Futaleufú, Patagonia Chilena. El origen geográfico es parte del valor del producto para tus clientes." },
   { num: "03", title: "Sin aditivos ni conservantes", body: "Fermentación 100% natural. Sin conservantes, sin colorantes, sin atajos. Un argumento de venta honesto para clientes exigentes." },
   { num: "04", title: "Fácil de exhibir", body: "No requiere cadena de frío hasta abrir el envase. Vida útil de varios meses en lugar fresco y seco. Ideal para góndola o vitrina." },
-  { num: "05", title: "Precio retail atractivo", body: "Con precio mayorista a $27.500/kg, el margen de reventa en bolsas individuales es amplio para el canal retail." },
+  { num: "05", title: "Margen de reventa atractivo", body: "Con precio mayorista a $27.500/kg, el margen para reventa en bolsas de 60 g y 100 g es amplio para el canal retail." },
   { num: "06", title: "Reposición flexible", body: "Mínimo de solo 20 unidades. Puedes comenzar con un pedido pequeño para testear la rotación antes de escalar." },
 ];
 
@@ -160,31 +160,29 @@ export default function TiendasPage() {
           </div>
         </section>
 
-        {/* Precios retail sugeridos */}
+        {/* Precios mayoristas */}
         <section className="py-28 lg:py-36">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-20">
-              <p className="text-earth tracking-[0.3em] uppercase text-[11px] mb-4 font-sans">Precio y margen</p>
-              <h2 className="font-serif text-4xl lg:text-5xl mb-6">Atractivo para<br />el canal retail</h2>
+              <p className="text-earth tracking-[0.3em] uppercase text-[11px] mb-4 font-sans">Precio mayorista</p>
+              <h2 className="font-serif text-4xl lg:text-5xl mb-6">Precio por<br />formato</h2>
               <div className="w-12 h-px bg-earth mx-auto" />
             </div>
             <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-2xl mx-auto">
               {[
-                { name: "Bolsa 60 g", mayorista: "$1.800", retail: "$1.800 por unidad", highlight: false },
-                { name: "Bolsa 100 g", mayorista: "$3.400", retail: "$3.400 por unidad", highlight: true },
+                { name: "Bolsa 60 g", precio: "$1.800", detalle: "por unidad · mín. 20 unidades", highlight: false },
+                { name: "Bolsa 100 g", precio: "$3.400", detalle: "por unidad · mín. 20 unidades", highlight: true },
               ].map((p) => (
                 <div key={p.name} className={`relative p-8 lg:p-10 border ${p.highlight ? "bg-charcoal text-white border-charcoal" : "bg-warm-white border-charcoal/[0.05]"}`}>
                   {p.highlight && <div className="absolute top-0 right-0 w-1 h-full bg-earth" />}
                   <h3 className="font-serif text-2xl mb-6">{p.name}</h3>
                   <p className={`text-[10px] tracking-[0.2em] uppercase font-sans mb-1 ${p.highlight ? "text-white/40" : "text-charcoal/35"}`}>Precio mayorista</p>
-                  <p className={`font-serif text-3xl mb-4 ${p.highlight ? "text-earth-light" : "text-charcoal"}`}>{p.mayorista}</p>
-                  <div className={`w-8 h-px mb-4 ${p.highlight ? "bg-earth" : "bg-earth/40"}`} />
-                  <p className={`text-[10px] tracking-[0.2em] uppercase font-sans mb-1 ${p.highlight ? "text-white/40" : "text-charcoal/35"}`}>Precio retail</p>
-                  <p className={`font-sans text-sm ${p.highlight ? "text-white/70" : "text-charcoal/55"}`}>{p.retail}</p>
+                  <p className={`font-serif text-3xl mb-4 ${p.highlight ? "text-earth-light" : "text-charcoal"}`}>{p.precio}</p>
+                  <p className={`font-sans text-sm ${p.highlight ? "text-white/70" : "text-charcoal/55"}`}>{p.detalle}</p>
                 </div>
               ))}
             </div>
-            <p className="text-center text-charcoal/35 text-xs font-sans mt-8">Precio desde 20 unidades · $27.500/kg de referencia</p>
+            <p className="text-center text-charcoal/35 text-xs font-sans mt-8">Precio de referencia por kilo: $27.500 CLP · Puedes combinar formatos libremente</p>
           </div>
         </section>
 

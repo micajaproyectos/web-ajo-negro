@@ -25,7 +25,7 @@ export const products: Record<string, Product> = {
     metaDescription:
       "Bolsa de ajo negro artesanal 60g producido en Patagonia Chilena. Fermentación natural y despacho a todo Chile.",
     description:
-      "Bolsa de ajo negro artesanal de 60 gramos producida en Futaleufú, Patagonia Chilena. Fermentación natural sin aditivos ni conservantes. Sabor suave, dulce y umami. Ideal para consumo personal, cocina gourmet o regalo.",
+      "Bolsa de ajo negro artesanal de 60 gramos producida en Futaleufú, Patagonia Chilena. Fermentación natural sin aditivos ni conservantes. Sabor suave, dulce y umami. Disponible en pedidos mayoristas desde 20 unidades.",
     price: "1800",
     priceCurrency: "CLP",
     image: "/productos/bolsa-60g.png",
