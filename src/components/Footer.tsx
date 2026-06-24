@@ -129,8 +129,12 @@ export default function Footer() {
           </p>
           <p className="text-white/30 text-xs font-sans flex items-center gap-2">
             Creado por{" "}
-            <span
-              className="relative inline-flex items-center gap-[1px] font-bold tracking-tight"
+            <a
+              href="https://amtecnologia.cl"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="AM Tecnología"
+              className="relative inline-flex items-center gap-[1px] font-bold tracking-tight transition-opacity hover:opacity-80"
               style={{
                 fontFamily: "var(--font-geist-sans), system-ui, sans-serif",
               }}
@@ -158,7 +162,7 @@ export default function Footer() {
               >
                 Tecnología
               </span>
-            </span>
+            </a>
           </p>
         </div>
       </div>
