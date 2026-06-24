@@ -377,7 +377,28 @@ export default function ParaQueSirvePage() {
                 <span className="text-[11px] tracking-widest uppercase font-sans text-charcoal/35 group-hover:text-earth transition-colors duration-300">Ver guía →</span>
               </Link>
             </div>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link href="/ajo-negro-para-bajar-de-peso" className="group flex items-center justify-between border border-charcoal/[0.07] p-6 bg-cream hover:shadow-md hover:shadow-charcoal/[0.04] transition-shadow duration-500">
+                <div>
+                  <p className="text-[10px] tracking-[0.25em] uppercase text-earth font-sans mb-1">Salud</p>
+                  <p className="font-serif text-base group-hover:text-earth transition-colors duration-300">Ajo negro para bajar de peso</p>
+                </div>
+                <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 shrink-0 ml-4">→</span>
+              </Link>
+              <Link href="/ajo-negro-en-ayunas" className="group flex items-center justify-between border border-charcoal/[0.07] p-6 bg-cream hover:shadow-md hover:shadow-charcoal/[0.04] transition-shadow duration-500">
+                <div>
+                  <p className="text-[10px] tracking-[0.25em] uppercase text-earth font-sans mb-1">Rutina</p>
+                  <p className="font-serif text-base group-hover:text-earth transition-colors duration-300">Ajo negro en ayunas</p>
+                </div>
+                <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 shrink-0 ml-4">→</span>
+              </Link>
+              <Link href="/ajo-negro-presion-arterial" className="group flex items-center justify-between border border-charcoal/[0.07] p-6 bg-cream hover:shadow-md hover:shadow-charcoal/[0.04] transition-shadow duration-500">
+                <div>
+                  <p className="text-[10px] tracking-[0.25em] uppercase text-earth font-sans mb-1">Salud</p>
+                  <p className="font-serif text-base group-hover:text-earth transition-colors duration-300">Ajo negro y presión arterial</p>
+                </div>
+                <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 shrink-0 ml-4">→</span>
+              </Link>
               <Link href="/productos" className="group flex items-center justify-between border border-charcoal/[0.07] p-6 bg-cream hover:shadow-md hover:shadow-charcoal/[0.04] transition-shadow duration-500">
                 <div>
                   <p className="text-[10px] tracking-[0.25em] uppercase text-earth font-sans mb-1">Comprar</p>

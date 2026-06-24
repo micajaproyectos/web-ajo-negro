@@ -12,6 +12,9 @@ const GUIAS_LINKS = [
   { label: "Beneficios del ajo negro", href: "/beneficios-ajo-negro" },
   { label: "¿Para qué sirve?", href: "/para-que-sirve-el-ajo-negro" },
   { label: "Cómo consumirlo", href: "/como-consumir-ajo-negro" },
+  { label: "Para bajar de peso", href: "/ajo-negro-para-bajar-de-peso" },
+  { label: "En ayunas", href: "/ajo-negro-en-ayunas" },
+  { label: "Presión arterial", href: "/ajo-negro-presion-arterial" },
   { label: "Ajo negro vs ajo normal", href: "/ajo-negro-vs-ajo-normal" },
 ];
 

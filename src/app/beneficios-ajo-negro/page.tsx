@@ -377,7 +377,15 @@ export default function BeneficiosPage() {
                 <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 font-sans text-xl shrink-0 ml-6">→</span>
               </Link>
             </div>
-            <div className="mt-4">
+            <div className="grid md:grid-cols-2 gap-4 mt-4">
+              <Link href="/ajo-negro-para-bajar-de-peso" className="group flex items-center justify-between border border-charcoal/[0.08] p-8 lg:p-10 bg-warm-white hover:shadow-lg hover:shadow-charcoal/[0.04] transition-shadow duration-500">
+                <div>
+                  <p className="text-[10px] tracking-[0.25em] uppercase text-earth font-sans mb-2">Salud</p>
+                  <p className="font-serif text-xl group-hover:text-earth transition-colors duration-300">Ajo negro para bajar de peso</p>
+                  <p className="text-charcoal/45 font-sans text-sm mt-2">Cómo ayuda a adelgazar, por qué funciona y cómo tomarlo.</p>
+                </div>
+                <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 font-sans text-xl shrink-0 ml-6">→</span>
+              </Link>
               <Link href="/ajo-negro-vs-ajo-normal" className="group flex items-center justify-between border border-charcoal/[0.08] p-8 lg:p-10 bg-warm-white hover:shadow-lg hover:shadow-charcoal/[0.04] transition-shadow duration-500">
                 <div>
                   <p className="text-[10px] tracking-[0.25em] uppercase text-earth font-sans mb-2">Comparativa</p>

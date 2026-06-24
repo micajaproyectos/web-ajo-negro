@@ -377,12 +377,20 @@ export default function ComoConsumirPage() {
                 <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 font-sans text-xl shrink-0 ml-6">→</span>
               </Link>
             </div>
-            <div className="grid md:grid-cols-3 gap-4 mb-4">
+            <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <Link href="/ajo-negro-en-ayunas"
+                className="group flex items-center justify-between border border-charcoal/[0.07] p-6 bg-warm-white hover:shadow-md hover:shadow-charcoal/[0.04] transition-shadow duration-500">
+                <div>
+                  <p className="text-[10px] tracking-[0.25em] uppercase text-earth font-sans mb-1">Rutina</p>
+                  <p className="font-serif text-lg group-hover:text-earth transition-colors duration-300">Ajo negro en ayunas: propiedades y cómo tomarlo</p>
+                </div>
+                <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 font-sans text-xl shrink-0 ml-6">→</span>
+              </Link>
               <Link href="/ajo-negro-vs-ajo-normal"
-                className="group flex items-center justify-between border border-charcoal/[0.07] p-6 bg-warm-white hover:shadow-md hover:shadow-charcoal/[0.04] transition-shadow duration-500 md:col-span-3">
+                className="group flex items-center justify-between border border-charcoal/[0.07] p-6 bg-warm-white hover:shadow-md hover:shadow-charcoal/[0.04] transition-shadow duration-500">
                 <div>
                   <p className="text-[10px] tracking-[0.25em] uppercase text-earth font-sans mb-1">Comparativa</p>
-                  <p className="font-serif text-lg group-hover:text-earth transition-colors duration-300">Ajo negro vs ajo normal: diferencias de sabor, antioxidantes y digestión</p>
+                  <p className="font-serif text-lg group-hover:text-earth transition-colors duration-300">Ajo negro vs ajo normal: sabor, antioxidantes y digestión</p>
                 </div>
                 <span className="text-charcoal/25 group-hover:text-earth transition-colors duration-300 font-sans text-xl shrink-0 ml-6">→</span>
               </Link>
