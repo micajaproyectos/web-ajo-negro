@@ -22,6 +22,12 @@ const CONTACT_INFO = [
     href: "mailto:ajonegroaustral@gmail.com",
     icon: "E",
   },
+  {
+    label: "Instagram",
+    value: "@ajonegroaustral",
+    href: "https://www.instagram.com/ajonegroaustral",
+    icon: "I",
+  },
   { label: "Origen", value: "Patagonia Chilena", href: null, icon: "P" },
 ];
 

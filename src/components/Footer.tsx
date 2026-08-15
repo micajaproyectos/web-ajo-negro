@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const INSTAGRAM_URL = "https://www.instagram.com/ajonegroaustral";
+
 const NAV_LINKS = [
   { label: "Inicio", href: "/" },
   { label: "Productos", href: "/productos" },
@@ -118,6 +120,24 @@ export default function Footer() {
                 className="text-white/40 hover:text-white/80 transition-colors"
               >
                 ajonegroaustral@gmail.com
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Ajo Negro Austral"
+                className="inline-flex items-center gap-2 text-white/40 hover:text-white/80 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-4 w-4"
+                  aria-hidden="true"
+                >
+                  <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07Zm0 6.68a3.16 3.16 0 1 0 0 6.32 3.16 3.16 0 0 0 0-6.32Zm0 5.21a2.05 2.05 0 1 1 0-4.1 2.05 2.05 0 0 1 0 4.1Zm4.02-5.33a.74.74 0 1 1-1.47 0 .74.74 0 0 1 1.47 0Z" />
+                </svg>
+                @ajonegroaustral
               </a>
             </div>
           </div>

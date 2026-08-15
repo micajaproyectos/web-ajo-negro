@@ -127,6 +127,7 @@ const organizationSchema = {
   url: BASE_URL,
   telephone: "+56974348843",
   email: "ajonegroaustral@gmail.com",
+  sameAs: ["https://www.instagram.com/ajonegroaustral"],
   image: `${BASE_URL}/og-image.webp`,
   logo: {
     "@type": "ImageObject",
