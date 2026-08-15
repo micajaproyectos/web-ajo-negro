@@ -18,8 +18,8 @@ const CONTACT_INFO = [
   },
   {
     label: "Email",
-    value: "contacto@amconsultora.cl",
-    href: "mailto:contacto@amconsultora.cl",
+    value: "ajonegroaustral@gmail.com",
+    href: "mailto:ajonegroaustral@gmail.com",
     icon: "E",
   },
   { label: "Origen", value: "Patagonia Chilena", href: null, icon: "P" },

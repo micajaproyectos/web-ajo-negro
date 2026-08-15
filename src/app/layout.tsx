@@ -126,7 +126,7 @@ const organizationSchema = {
     "Productores artesanales de ajo negro en Futaleufú, Patagonia Chilena. Proveedor mayorista para restaurantes y tiendas de productos naturales en todo Chile.",
   url: BASE_URL,
   telephone: "+56974348843",
-  email: "contacto@amconsultora.cl",
+  email: "ajonegroaustral@gmail.com",
   image: `${BASE_URL}/og-image.webp`,
   logo: {
     "@type": "ImageObject",

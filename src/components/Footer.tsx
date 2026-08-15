@@ -114,10 +114,10 @@ export default function Footer() {
                 +56 9 7434 8843
               </a>
               <a
-                href="mailto:contacto@amconsultora.cl"
+                href="mailto:ajonegroaustral@gmail.com"
                 className="text-white/40 hover:text-white/80 transition-colors"
               >
-                contacto@amconsultora.cl
+                ajonegroaustral@gmail.com
               </a>
             </div>
           </div>
